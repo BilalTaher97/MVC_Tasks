@@ -1,0 +1,46 @@
+﻿@{
+	ViewData["Title"] = "Home Page";
+}
+
+@{
+	Layout = "_HomeLayout";
+}
+
+@section Style {
+	<link rel="stylesheet" href="~/css/StyleHome.css?v=@DateTime.Now.Ticks" />
+}
+
+
+@{
+	string[] s1 = { "Apatment with amazing park view", "Double Deluxe Room -Double Bed", "Luxury Apartment-Ground Floor" };
+	string[] s2 = { "$45.00", "$35.00", "$40.00" };
+	string[] s3 = { "https://www.decoraid.com/wp-content/uploads/2021/04/modern-spacious-light-bedroom-scaled.jpg",
+	"https://www.decoraid.com/wp-content/uploads/2021/04/modern-spacious-light-bedroom-scaled.jpg",
+	"https://www.decoraid.com/wp-content/uploads/2021/04/modern-spacious-light-bedroom-scaled.jpg"};
+}
+
+<h3 class="Main-Text" >Exraordinaliy rooms with elegent,yet a rustic atomosphere</h3>
+
+
+<div class="Container_1">
+
+	@for (int x = 0; x < 3; x++)
+	{
+		<div class="card" style="width: 18rem; text-align:center;">
+			<img src="@s3[x]" class="card-img-top" alt="...">
+			<div class="card-body">
+				<h5 class="card-title">@s1[x]</h5>
+				<p class="card-text">@s2[x]</p>
+				<a href="#" class="btn">View</a>
+			</div>
+		</div>
+
+	}
+
+	
+
+</div>
+
+<div>
+	<p class="Text-1">Images From <u>Freepik</u></p>
+</div>

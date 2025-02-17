@@ -1,0 +1,82 @@
+﻿@{
+	ViewData["Title"] = "Index";
+}
+
+@{
+	Layout = "_AdmainLayout";
+}
+
+ 
+<div id="viewport">
+	<!-- Sidebar -->
+	<div id="sidebar">
+		<header>
+			<a href="#">Admin Menu</a>
+		</header>
+		<ul class="nav">
+			<li>
+				<a href="#">
+					<i class="zmdi zmdi-view-dashboard"></i> Dashboard
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<i class="zmdi zmdi-link"></i> Shortcuts
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<i class="zmdi zmdi-widgets"></i> Overview
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<i class="zmdi zmdi-calendar"></i> Events
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<i class="zmdi zmdi-settings"></i> Services
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<i class="zmdi zmdi-comment-more"></i> Contact
+				</a>
+			</li>
+		</ul>
+	</div>
+	<!-- Content -->
+	<div id="content">
+		<h1>Users List</h1>
+
+		@{
+			List<string> Users = new List<string> { "Bilal", "Khalid", "Ayman" };
+			List<string> Age = new List<string> { "27", "25", "28" };
+			List<string> Email = new List<string> { "Bilal@gmail.com", "Khalid@gmail.com", "Ayman@gmail.com" };
+		}
+		<table class="table table-striped">
+			<thead>
+				<tr class="Title">
+					<th>User Name</th>
+					<th>Age</th>
+					<th>Email</th>
+
+				</tr>
+			</thead>
+			<tbody>
+				@for (int i = 0; i < Users.Count; i++)
+				{
+					<tr>
+						<td>@Users[i]</td>
+						<td>@Age[i]</td>
+						<td>@Email[i]</td>
+					
+					</tr>
+				}
+			</tbody>
+		</table>
+
+	</div>
+</div>
+
