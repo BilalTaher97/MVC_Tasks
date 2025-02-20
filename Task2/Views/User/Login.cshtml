@@ -1,0 +1,17 @@
+﻿@section Style {
+
+    <link rel="stylesheet" href="~/css/StyleLogin.css?v=@DateTime.Now.Ticks" />
+}
+
+
+<div class="login">
+    <h1>Login</h1>
+    <form method="post" action="/User/HandelLogin">
+        <input type="text" name="Email" placeholder="Email" required="required" />
+        <input type="password" name="Password" placeholder="Password" required="required" value="" id="Pass" />
+        <button type="submit" class="btn btn-primary btn-block btn-large">Login</button>
+    </form>
+</div>
+
+
+
