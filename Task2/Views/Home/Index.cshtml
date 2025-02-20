@@ -2,6 +2,32 @@
     ViewData["Title"] = "Home Page";
 }
 
+@section Navbar {
+
+									
+	@if (@Context.Session.GetString("_Email") == null)
+	{
+
+        <li class="nav-item">
+            <a class="nav-link text-dark" asp-area="" asp-controller="User" asp-action="Login">Login</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-dark" asp-area="" asp-controller="User" asp-action="Register">Register</a>
+        </li>
+	}
+    else
+    {
+        <li class="nav-item">
+            <a class="nav-link text-dark" asp-area="" asp-controller="User" asp-action="Profile">Profile</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-dark" asp-area="" asp-controller="User" asp-action="Login">Logout</a>
+        </li>
+    }
+
+}
+
+
 <div class="text-center">
     <h1 class="display-4">Hello @TempData["username"] , Welcome back....</h1>
 </div>
