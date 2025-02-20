@@ -18,24 +18,7 @@ namespace Task2.Controllers
             return View();
         }
 
-        [HttpPost]
-        public IActionResult HandelRegister(string Email, string Password, string UserName)
-        {
-            if (Email != null && Password != null)
-            {
-                HttpContext.Session.SetString(SessionUserName, UserName);
-                HttpContext.Session.SetString(SessionEmail, Email);
-                HttpContext.Session.SetString(SessionPassword, Password);
-
-                return RedirectToAction("Login");
-            }
-            else
-            {
-                return RedirectToAction("Register");
-            }
-
-            
-        }
+        
 
 
         public IActionResult Login()
@@ -45,41 +28,7 @@ namespace Task2.Controllers
         }
 
 
-        [HttpPost]
-        public IActionResult HandelLogin(string Email, string Password)
-        {
-            string email = HttpContext.Session.GetString(SessionEmail);
-            string password = HttpContext.Session.GetString(SessionPassword);
-
-
-            if(email != null && password != null)
-            {
-
-                TempData["email"] = email;
-                TempData["password"] = password;
-                TempData["username"] = HttpContext.Session.GetString(SessionUserName);
-
-
-
-                if (Email == email && Password == password)
-                {
-                    
-
-                    return RedirectToAction("Index", "Home");
-                }
-                else
-                {
-                    return RedirectToAction("Login");
-                }
-
-            }
-            else
-            {
-                return RedirectToAction("Login");
-            }
-            
-
-        }
+       
 
 
         public IActionResult Profile()
