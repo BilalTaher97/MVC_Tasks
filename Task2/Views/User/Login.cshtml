@@ -4,14 +4,15 @@
 }
 
 
-<div class="login">
-    <h1>Login</h1>
-    <form method="post" action="/User/HandelLogin">
-        <input type="text" name="Email" placeholder="Email" required="required" />
-        <input type="password" name="Password" placeholder="Password" required="required" value="" id="Pass" />
-        <button type="submit" class="btn btn-primary btn-block btn-large">Login</button>
-        <input type="checkbox" name="Rem" id="Rem" style="margin-top:70px" />
-        <label id="Rem" style="color:white">Remember me</label>
+<div class="wrapper">
+    <form class="form-signin" method="post" action="/User/HandelLogin">
+        <h2 class="form-signin-heading">Login</h2>
+        <input type="email" class="form-control" name="Email" placeholder="Email Address" required="" autofocus="" />
+        <input type="password" class="form-control" name="Password" placeholder="Password" required="" />
+        <label class="checkbox">
+            <input type="checkbox" value="Yes" id="rememberMe" name="rememberMe"> Remember me
+        </label>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
     </form>
 </div>
 

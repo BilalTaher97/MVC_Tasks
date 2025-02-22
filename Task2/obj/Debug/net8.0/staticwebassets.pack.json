@@ -2,7 +2,11 @@
   "Files": [
     {
       "Id": "C:\\Users\\Orange\\source\\repos\\MVC_Tasks\\Task2\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\Task2.bundle.scp.css",
-      "PackagePath": "staticwebassets\\Task2.5iiopc0u16.bundle.scp.css"
+      "PackagePath": "staticwebassets\\Task2.v617s2qp6l.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\Orange\\source\\repos\\MVC_Tasks\\Task2\\wwwroot\\css\\StyleAdmin.css",
+      "PackagePath": "staticwebassets\\css\\StyleAdmin.css"
     },
     {
       "Id": "C:\\Users\\Orange\\source\\repos\\MVC_Tasks\\Task2\\wwwroot\\css\\StyleLogin.css",

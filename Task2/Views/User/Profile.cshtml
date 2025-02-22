@@ -28,15 +28,37 @@
 								<div class="row">
 									<div class="col-sm-6">
 										<p class="m-b-10 f-w-600">Email</p>
-										<h6 class="text-muted f-w-400">@TempData["email"]</h6>
+										@if (Context.Request.Cookies["userInfo"] != null)
+										{
+											<h6 class="text-muted f-w-400">@Context.Request.Cookies["userInfo"]</h6>
+										}
+										else
+										{
+											<h6 class="text-muted f-w-400">@Context.Session.GetString("_Email")</h6>
+										}
+										
 									</div>
 									<div class="col-sm-6">
 										<p class="m-b-10 f-w-600">Password</p>
-										<h6 class="text-muted f-w-400">@TempData["password"]</h6>
+										@if (Context.Request.Cookies["password"] != null)
+										{
+											<h6 class="text-muted f-w-400">@Context.Request.Cookies["password"]</h6>
+										}
+										else
+										{
+											<h6 class="text-muted f-w-400">@Context.Session.GetString("_Password")</h6>
+										}
 									</div>
 									<div class="col-sm-6">
 										<p class="m-b-10 f-w-600">User Name</p>
-										<h6 class="text-muted f-w-400">@Context.Session.GetString("_UserName")</h6>
+										@if (Context.Request.Cookies["username"] != null)
+										{
+											<h6 class="text-muted f-w-400">@Context.Request.Cookies["username"]</h6>
+										}
+										else
+										{
+											<h6 class="text-muted f-w-400">@Context.Session.GetString("_UserName")</h6>
+										}
 									</div>
 								</div>
 								

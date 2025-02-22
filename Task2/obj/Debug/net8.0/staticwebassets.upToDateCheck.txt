@@ -1,4 +1,5 @@
 wwwroot\css\site.css
+wwwroot\css\StyleAdmin.css
 wwwroot\css\StyleLogin.css
 wwwroot\css\StyleProfile.css
 wwwroot\css\StyleRegister.css
