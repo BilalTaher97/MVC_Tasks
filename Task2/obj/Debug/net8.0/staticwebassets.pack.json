@@ -9,6 +9,10 @@
       "PackagePath": "staticwebassets\\css\\StyleAdmin.css"
     },
     {
+      "Id": "C:\\Users\\Orange\\source\\repos\\MVC_Tasks\\Task2\\wwwroot\\css\\StyleEditProfile.css",
+      "PackagePath": "staticwebassets\\css\\StyleEditProfile.css"
+    },
+    {
       "Id": "C:\\Users\\Orange\\source\\repos\\MVC_Tasks\\Task2\\wwwroot\\css\\StyleLogin.css",
       "PackagePath": "staticwebassets\\css\\StyleLogin.css"
     },

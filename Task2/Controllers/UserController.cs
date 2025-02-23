@@ -1,6 +1,7 @@
 ﻿using System.Runtime.Intrinsics.Arm;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Routing;
 using Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.BlazorIdentity.Pages.Manage;
 
 namespace Task2.Controllers
@@ -12,7 +13,9 @@ namespace Task2.Controllers
         const string SessionEmail = "_Email";
         const string SessionPassword = "_Password";
 
-     
+        const string SessionAddress = "_Address";
+        const string SessionPhone = "_Phone";
+
         public IActionResult Index()
         {
             return View();
@@ -46,9 +49,6 @@ namespace Task2.Controllers
 
         public IActionResult Login()
         {
-
-            
-
 
 
             string data = Request.Cookies["userInfo"];
@@ -94,6 +94,12 @@ namespace Task2.Controllers
                         Response.Cookies.Append("userInfo", TempData["email"].ToString(), obj);
                         Response.Cookies.Append("username", TempData["username"].ToString(), obj);
                         Response.Cookies.Append("password", TempData["password"].ToString(), obj);
+
+                        if(HttpContext.Session.GetString("_Address") != null && HttpContext.Session.GetString("_Phone") != null)
+                        {
+                            Response.Cookies.Append("address", HttpContext.Session.GetString("_Address"), obj);
+                            Response.Cookies.Append("phone", HttpContext.Session.GetString("_Phone"), obj);
+                        }
                 
                     }
 
@@ -117,6 +123,36 @@ namespace Task2.Controllers
         public IActionResult Profile()
         {
             return View();
+        }
+
+
+        public IActionResult EditProfile()
+        {
+
+            return View();
+        }
+
+
+        [HttpPost]
+        public IActionResult EditProfile_2(string UserName , string Email , string Password , string Address ,string Phone)
+        {
+            if(UserName != null && Email != null && Password != null)
+            {
+                HttpContext.Session.SetString(SessionUserName, UserName);
+                HttpContext.Session.SetString(SessionEmail, Email);
+                HttpContext.Session.SetString(SessionPassword, Password);
+
+
+                if(Address != null && Phone != null)
+                {
+                    HttpContext.Session.SetString(SessionUserName, Address);
+                    HttpContext.Session.SetString(SessionEmail, Phone);
+                }
+
+            }
+
+
+            return RedirectToAction("Profile"); 
         }
 
         public IActionResult Logout()

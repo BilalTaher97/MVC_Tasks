@@ -1,0 +1,40 @@
+﻿@model IEnumerable<Task3.Models.Department>
+
+
+<button onclick="window.location.href='@Url.Action("Create", "Department" )'" class="btn btn-primary">Add User</button>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Number Of Employee</th>
+            <th scope="col">Code</th>
+            <th scope="col">IsActive</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @item.Name
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NumberOFEmployees)
+                </td>
+                <td>
+                    @item.Code
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IsActive)
+                </td>
+            </tr>
+        }
+
+    </tbody>
+</table>
+
+
+
+

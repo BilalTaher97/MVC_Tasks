@@ -1,0 +1,61 @@
+﻿@section Style {
+
+	<link rel="stylesheet" href="~/css/StyleEditProfile.css" asp-append-version="true" />
+}
+
+
+
+
+
+
+<div class="form-container">
+	<p class="title">Login</p>
+	<form class="form" action="/User/EditProfile_2" method="post">
+		<div class="input-group">
+			<label for="username">Name</label>
+			<input id="username" name="UserName" type="text"
+				   value="@(
+                        Context.Request.Cookies["username"] ??
+                        Context.Session.GetString("_UserName")
+                    )" />
+		</div>
+
+		<div class="input-group">
+			<label for="email">Email</label>
+			<input id="email" name="Email" type="email"
+				   value="@(
+                        Context.Request.Cookies["userInfo"] ??
+                        Context.Session.GetString("_Email")
+                    )" />
+
+			<label for="phone">Phone</label>
+			<input id="phone" name="Phone" type="text"
+				   value="@(
+                        Context.Request.Cookies["phone"] ??
+                        Context.Session.GetString("_Phone")
+                    )" />
+
+			<label for="location">Address</label>
+			<input type="text" name="Address"
+				   value="@(
+                        Context.Request.Cookies["address"] ??
+                        Context.Session.GetString("_Address")
+                    )" />
+		</div>
+
+		<label for="password">Password</label>
+		<input type="password" name="Password"
+			   value="@(
+                    Context.Request.Cookies["password"] ??
+                    Context.Session.GetString("_Password")
+                )" />
+
+		<button type="submit" style="margin-top:6%;" class="sign">
+			Save Change
+		</button>
+	</form>
+</div>
+
+
+
+

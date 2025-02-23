@@ -1,0 +1,29 @@
+﻿@model IEnumerable<Task3.Models.User>
+
+
+<button onclick="window.location.href='@Url.Action("Create", "Home" )'" class="btn btn-primary">Add User</button>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Email</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @item.Name
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Email)
+                </td>
+
+            </tr>
+        }
+       
+    </tbody>
+</table>
