@@ -1,0 +1,15 @@
+﻿
+@model Task3.Models.User;
+
+<h1 style="color:brown ; border-bottom:1px solid black">Delete</h1>
+
+
+<h3>Name: <span>@Model.Name</span></h3>
+<h3>Email: <span>@Model.Email</span></h3>
+
+<div class="btns">
+	<button onclick="window.location.href='@Url.Action("ConDelete", "Home",new { Id = Model.Id })'" style="background-color:red ; color:white ; font-weight:bold ; padding:5px">Confirm Delete</button>
+	<button onclick="window.location.href='@Url.Action("Index", "Home")'"
+	style="background-color:green ;color:white ; font-weight:bold ; padding:5px">Back</button>
+</div>
+

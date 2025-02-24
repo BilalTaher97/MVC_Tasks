@@ -1,0 +1,33 @@
+﻿@model IEnumerable<Task4.Models.Product>
+
+
+	@section Style
+	{
+		<link rel="stylesheet" href="./css/StyleHome.css" asp-append-version="true" />
+
+	}
+
+	<div class="main-btn">
+	<button onclick="window.location.href='@Url.Action("Add","Home")'">Add New</button>
+	</div>
+
+<div class="Main-div">
+
+	@foreach (var item in Model)
+	{
+		<div class="card" style="width: 18rem;">
+			<img src="@item.Image" class="card-img-top" alt="...">
+			<div class="card-body">
+				<h5 class="card-title">@item.Name</h5>
+				<h6>$@item.Price</h6>
+				<a asp-action="Details" asp-route-Id="@item.Id" class="btn btn-primary">Details</a>
+				<a asp-action="Edit" asp-route-Id="@item.Id" class="btn btn-primary">Edit</a>
+				<a asp-action="Delete" asp-route-Id="@item.Id" class="btn btn-primary">Delete</a>
+
+			</div>
+		</div>
+	}
+
+
+
+</div>
