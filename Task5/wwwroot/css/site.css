@@ -1,0 +1,67 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.navbar {
+    position: relative;
+    left: 250px;
+}
+
+
+
+
+
+
+
+.Main-div {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card {
+    margin-right: 30px
+}
+
+img {
+    height: 200px;
+}
+
+.main-btn {
+    position: relative;
+    left: 550px;
+    margin-bottom: 120px;
+    margin-top: 50px;
+}
+
+
+    .main-btn button {
+        padding: 5px 70px;
+        background-color: black;
+        color: powderblue;
+        font-weight: bold;
+        transition: 0.5s;
+    }
+
+        .main-btn button:hover {
+            background-color: brown;
+            color: white;
+        }

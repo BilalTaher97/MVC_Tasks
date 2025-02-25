@@ -1,0 +1,52 @@
+﻿@section Style {
+
+
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css" rel="stylesheet" />
+	<link href="~/css/StyleAdmin.css?v=@DateTime.Now.Ticks" rel="stylesheet" />
+
+}
+
+<div id="viewport">
+	<!-- Sidebar -->
+	<div id="sidebar">
+		<header>
+			<a href="#">Admin Menu</a>
+		</header>
+		<ul class="nav">
+			<li>
+				<a href="#">
+					<i class="zmdi zmdi-view-dashboard"></i> Dashboard
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<i class="zmdi zmdi-link"></i> Shortcuts
+				</a>
+			</li>
+			<li>
+				<a asp-action="Index" asp-controller="Users">
+					<i class="zmdi zmdi-widgets"></i> Users Management
+				</a>
+			</li>
+			<li>
+				<a asp-action="Index" asp-controller="Products">
+					<i class="zmdi zmdi-calendar"></i> Products Management
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<i class="zmdi zmdi-settings"></i> Services
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<i class="zmdi zmdi-comment-more"></i> Contact
+				</a>
+			</li>
+		</ul>
+	</div>
+	
+	
+</div>
+

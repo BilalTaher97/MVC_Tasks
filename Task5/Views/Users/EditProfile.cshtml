@@ -1,0 +1,21 @@
+﻿@model Task5.Models.User;
+
+
+<form asp-action="EditProfile" method="post">
+	<div class="form-row align-items-center">
+		<div class="col-auto">
+			<label asp-for="Name" class="sr-only" for="inlineFormInput">Name</label>
+			<input asp-for="Name" type="text" class="form-control mb-2" id="inlineFormInput">
+		</div>
+		<div class="col-auto">
+			<label asp-for="Email" class="sr-only" for="inlineFormInput">Email</label>
+			<input asp-for="Email" type="text" class="form-control mb-2" id="inlineFormInput">
+		</div>
+		<div class="col-auto">
+			<label asp-for="Password" class="sr-only" for="inlineFormInput">Name</label>
+			<input asp-for="Password" type="text" class="form-control mb-2" id="inlineFormInput">
+		</div>
+	</div>
+	<button type="submit">Save Change</button>
+</form>
+

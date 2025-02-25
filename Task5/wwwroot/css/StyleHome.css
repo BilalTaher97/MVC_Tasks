@@ -1,0 +1,35 @@
+﻿
+
+.Main-div {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card {
+    margin-right: 30px
+}
+
+img {
+    height: 200px;
+}
+
+.main-btn {
+    position: relative;
+    left: 550px;
+    margin-bottom: 120px;
+    margin-top: 50px;
+}
+
+
+    .main-btn button {
+        padding: 5px 70px;
+        background-color: black;
+        color: powderblue;
+        font-weight: bold;
+        transition: 0.5s;
+    }
+
+        .main-btn button:hover {
+            background-color: brown;
+            color: white;
+        }
